@@ -30,6 +30,7 @@ Partial Class Form1
 		Me.GridData = New System.Windows.Forms.DataGridView()
 		Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.ListarBtn = New System.Windows.Forms.Button()
+		Me.Sucess = New System.Windows.Forms.Label()
 		CType(Me.GridData, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
@@ -99,11 +100,23 @@ Partial Class Form1
 		Me.ListarBtn.Text = "Listar"
 		Me.ListarBtn.UseVisualStyleBackColor = True
 		'
+		'Sucess
+		'
+		Me.Sucess.AutoSize = True
+		Me.Sucess.ForeColor = System.Drawing.Color.Blue
+		Me.Sucess.Location = New System.Drawing.Point(208, 272)
+		Me.Sucess.Name = "Sucess"
+		Me.Sucess.Size = New System.Drawing.Size(104, 15)
+		Me.Sucess.TabIndex = 7
+		Me.Sucess.Text = "Cadastro efetuado"
+		Me.Sucess.Visible = False
+		'
 		'Form1
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.ClientSize = New System.Drawing.Size(800, 450)
+		Me.Controls.Add(Me.Sucess)
 		Me.Controls.Add(Me.ListarBtn)
 		Me.Controls.Add(Me.GridData)
 		Me.Controls.Add(Me.Button1)
@@ -127,4 +140,5 @@ Partial Class Form1
 	Friend WithEvents GridData As DataGridView
 	Friend WithEvents ListarBtn As Button
 	Friend WithEvents Nome As DataGridViewTextBoxColumn
+	Friend WithEvents Sucess As Label
 End Class

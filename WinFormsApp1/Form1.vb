@@ -11,7 +11,6 @@
 
 			GridData.Rows.Add(linha("Email").ToString())
 
-
 		Next
 
 
@@ -38,6 +37,7 @@
 
 		Rep.NovoContato(objeto)
 
+		Sucess.Visible = True
 
 	End Sub
 
