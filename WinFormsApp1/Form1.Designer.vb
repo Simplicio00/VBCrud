@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
 	Inherits System.Windows.Forms.Form
 
 	'Form overrides dispose to clean up the component list.
-	<System.Diagnostics.DebuggerNonUserCode()> _
+	<System.Diagnostics.DebuggerNonUserCode()>
 	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 		Try
 			If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,17 @@ Partial Class Form1
 	'NOTE: The following procedure is required by the Windows Form Designer
 	'It can be modified using the Windows Form Designer.  
 	'Do not modify it using the code editor.
-	<System.Diagnostics.DebuggerStepThrough()> _
+	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.MailContent = New System.Windows.Forms.TextBox()
 		Me.NameContent = New System.Windows.Forms.TextBox()
 		Me.Label2 = New System.Windows.Forms.Label()
 		Me.Button1 = New System.Windows.Forms.Button()
+		Me.GridData = New System.Windows.Forms.DataGridView()
+		Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
+		Me.ListarBtn = New System.Windows.Forms.Button()
+		CType(Me.GridData, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'Label1
@@ -70,11 +74,38 @@ Partial Class Form1
 		Me.Button1.Text = "Cadastrar"
 		Me.Button1.UseVisualStyleBackColor = True
 		'
+		'GridData
+		'
+		Me.GridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+		Me.GridData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nome})
+		Me.GridData.Location = New System.Drawing.Point(435, 12)
+		Me.GridData.Name = "GridData"
+		Me.GridData.RowTemplate.Height = 25
+		Me.GridData.Size = New System.Drawing.Size(343, 408)
+		Me.GridData.TabIndex = 5
+		'
+		'Nome
+		'
+		Me.Nome.HeaderText = "EMAIL"
+		Me.Nome.Name = "Nome"
+		Me.Nome.Width = 300
+		'
+		'ListarBtn
+		'
+		Me.ListarBtn.Location = New System.Drawing.Point(40, 348)
+		Me.ListarBtn.Name = "ListarBtn"
+		Me.ListarBtn.Size = New System.Drawing.Size(151, 23)
+		Me.ListarBtn.TabIndex = 6
+		Me.ListarBtn.Text = "Listar"
+		Me.ListarBtn.UseVisualStyleBackColor = True
+		'
 		'Form1
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.ClientSize = New System.Drawing.Size(800, 450)
+		Me.Controls.Add(Me.ListarBtn)
+		Me.Controls.Add(Me.GridData)
 		Me.Controls.Add(Me.Button1)
 		Me.Controls.Add(Me.NameContent)
 		Me.Controls.Add(Me.Label2)
@@ -82,6 +113,7 @@ Partial Class Form1
 		Me.Controls.Add(Me.Label1)
 		Me.Name = "Form1"
 		Me.Text = "Form1"
+		CType(Me.GridData, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
@@ -92,4 +124,7 @@ Partial Class Form1
 	Friend WithEvents NameContent As TextBox
 	Friend WithEvents Label2 As Label
 	Friend WithEvents Button1 As Button
+	Friend WithEvents GridData As DataGridView
+	Friend WithEvents ListarBtn As Button
+	Friend WithEvents Nome As DataGridViewTextBoxColumn
 End Class

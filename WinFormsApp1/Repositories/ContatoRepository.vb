@@ -26,5 +26,27 @@ Public Class ContatoRepository
 
 	End Sub
 
+	Public Function ConsultarContatos() As DataTable
+
+		Dim dt As New DataTable
+		Dim ds As New DataSet()
+		strInstruc = "SELECT IdContato, Nome, Email FROM contato"
+		objCommand.CommandText = strInstruc
+		objCommand.Connection = conexao
+
+		conexao.Open()
+		Dim da As New SqlDataAdapter(objCommand)
+
+		'Dim lista As New List(Of Contato)()
+
+		da.Fill(ds)
+		dt = ds.Tables(0)
+
+
+		conexao.Close()
+		Return dt
+
+	End Function
+
 
 End Class
