@@ -5,6 +5,7 @@
 		'griddata
 		Dim dt As New DataTable
 
+		GridData.Rows.Clear()
 
 
 		For Each linha As DataRow In objDados.ConsultarContatos().Rows
@@ -38,6 +39,7 @@
 		Rep.NovoContato(objeto)
 
 		Sucess.Visible = True
+
 
 	End Sub
 

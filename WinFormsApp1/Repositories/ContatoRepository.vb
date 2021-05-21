@@ -20,7 +20,13 @@ Public Class ContatoRepository
 		objCommand.Parameters.AddWithValue("@Email", contato.Email)
 
 		conexao.Open()
-		objCommand.ExecuteNonQuery()
+		Try
+			objCommand.ExecuteNonQuery()
+		Catch ex As Exception
+
+		End Try
+
+
 		conexao.Close()
 
 
